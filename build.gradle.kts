@@ -29,23 +29,19 @@ loom {
 }
 
 repositories {
-	maven("https://maven.parchmentmc.org/")
-
-	maven("https://maven.terraformersmc.com/")
-	maven("https://maven.isxander.dev/releases")
-	maven("https://api.modrinth.com/maven")
+        maven("https://maven.terraformersmc.com/")
+        maven("https://maven.isxander.dev/releases")
+        maven("https://api.modrinth.com/maven")
 }
 
 dependencies {
 	minecraft("com.mojang:minecraft:$minecraft")
-	mappings(loom.layered {
-		officialMojangMappings()
-		parchment("org.parchmentmc.data:parchment-${versionProp("parchment_minecraft_version")}:${versionProp("parchment_mappings_version")}@zip")
-	})
-	modImplementation("net.fabricmc:fabric-loader:${versionProp("fabric_loader")}")
+        mappings(loom.layered {
+                officialMojangMappings()
+        })
+        modImplementation("net.fabricmc:fabric-loader:${versionProp("fabric_loader")}")
 
-	// Mod implementations
-	modCompileOnly("dev.isxander:yet-another-config-lib:${versionProp("yacl_version")}-fabric")
+        // Mod implementations
 }
 
 tasks.processResources {
