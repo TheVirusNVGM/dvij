@@ -71,7 +71,6 @@ configurations {
 }
 
 repositories {
-    maven("https://maven.parchmentmc.org/")
     maven("https://maven.neoforged.net/releases/")
 
     maven("https://maven.isxander.dev/releases")
@@ -82,7 +81,6 @@ dependencies {
     minecraft("com.mojang:minecraft:$minecraft")
     mappings(loom.layered {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${versionProp("parchment_minecraft_version")}:${versionProp("parchment_mappings_version")}@zip")
     })
     neoForge("net.neoforged:neoforge:${versionProp("neoforge_loader")}")
 
@@ -90,7 +88,6 @@ dependencies {
     shadowBundle(project(common.path, "transformProductionNeoForge")) { isTransitive = false }
 
     // Mod implementations
-    //runtimeOnly("dev.isxander:yet-another-config-lib:${versionProp("yacl_version")}-neoforge")
 }
 
 tasks.processResources {

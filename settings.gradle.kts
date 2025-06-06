@@ -19,11 +19,11 @@ stonecutter {
     centralScript = "build.gradle.kts"
     kotlinController = true
     create(rootProject) {
-        versions("1.21.5")
-        vcsVersion = "1.21.5"
+        versions("1.21.1")
+        vcsVersion = "1.21.1"
         branch("fabric")
-        //branch("forge") { versions("1.21.5") }+
-        branch("neoforge") { versions("1.21.5") }
+        //branch("forge") { versions("1.21.1") }+
+        branch("neoforge") { versions("1.21.1") }
     }
 }
 

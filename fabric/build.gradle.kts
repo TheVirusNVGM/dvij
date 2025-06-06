@@ -79,8 +79,6 @@ configurations {
 }
 
 repositories {
-    maven("https://maven.parchmentmc.org/")
-
     maven("https://maven.terraformersmc.com/")
     maven("https://maven.isxander.dev/releases")
     maven("https://api.modrinth.com/maven")
@@ -90,7 +88,6 @@ dependencies {
     minecraft("com.mojang:minecraft:$minecraft")
     mappings(loom.layered {
         officialMojangMappings()
-        parchment("org.parchmentmc.data:parchment-${versionProp("parchment_minecraft_version")}:${versionProp("parchment_mappings_version")}@zip")
     })
     modImplementation("net.fabricmc:fabric-loader:${versionProp("fabric_loader")}")
 
@@ -99,7 +96,6 @@ dependencies {
 
     // Mod implementations
     modImplementation("net.fabricmc.fabric-api:fabric-api:${versionProp("fabric_api_version")}")
-    modImplementation("dev.isxander:yet-another-config-lib:${versionProp("yacl_version")}-fabric")
     modImplementation("com.terraformersmc:modmenu:${versionProp("modmenu_version")}")
     modImplementation("maven.modrinth:sodium:${versionProp("sodium_version")}")
     modImplementation("maven.modrinth:iris:${versionProp("iris_version")}")
